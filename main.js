@@ -1,7 +1,7 @@
 function main(){
-    //sumTests();
-    //longestWordTests();
-    //rangeTests();
+    sumTests();
+    longestWordTests();
+    rangeTests();
     nbOccurencesTests();
 }
 main();

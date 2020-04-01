@@ -3,5 +3,9 @@ function main(){
     longestWordTests();
     rangeTests();
     nbOccurencesTests();
+    flatten2DTests();
+    prenomTests();
+    multiplicationTests();
+    cesarTests();
 }
 main();

@@ -53,3 +53,83 @@ function nbOccurences(text,mot){
     }
     return occur;
 }
+
+function flatten2D(array){
+    let tab=[];
+    let size=array.length;
+    for (let i=0;i<size;i++){
+        for (let j=0;j<array[i].length;j++){
+            tab.push(array[i][j]);
+        }
+    }
+return tab;
+}
+
+function prenom(tab){
+    console.log(tab);
+    tab.pop();
+    tab.push("Jacques");
+    console.log(tab);
+}
+
+function multiplication(){
+    for (let i=0; i<=9;i++){
+        for (let j=0;j<=9;j++){
+            console.log(i+"*"+j+"="+i*j);
+        }
+    }
+}
+
+function cesarcode(mots,code){
+    mots=mots.split("");
+    let size=mots.length
+    let ascii;
+    for (let i=0;i<size;i++){
+        ascii=mots[i].charCodeAt(0);
+        if (ascii>=65 && ascii <=90){
+            ascii+=code;
+            if (ascii>90){
+                ascii-=26
+            }
+        }
+        if (ascii>=97 && ascii <=122){
+            ascii+=code;
+            if (ascii>122){
+                ascii-=26;
+            }
+        }
+        mots[i]=String.fromCharCode(ascii);
+    }
+    return mots.join("");
+}
+
+function cesardecode(mots,code){
+    mots=mots.split("");
+    let size=mots.length
+    let ascii;
+    for (let i=0;i<size;i++){
+        ascii=mots[i].charCodeAt();
+        if (ascii>=65 && ascii <=90){
+            ascii-=code;
+            if (ascii<65){
+                ascii+=26
+            }
+        }
+        if (ascii>=97 && ascii <=122){
+            ascii-=code;
+            if (ascii<97){
+                ascii+=26;
+            }
+        }
+        mots[i]=String.fromCharCode(ascii);
+    }
+    return mots.join("");;
+}
+
+function viginerecode(mots,code){
+
+}
+
+function vigineredecode(mots,code){
+    codes=code.split("");
+}
